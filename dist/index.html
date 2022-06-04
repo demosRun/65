@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 页面的元信息 -->
+  <title>{TAG_14226_TAG}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+
+</head>
+
+<body>
+  <div class="scale-box">
+    <!-- 页面[loading]-->
+    <div class="loading-box page" template="loading" style="display: none;">
+      <img class="loading" src="./static/images/start-8.png" o-animation="flicker">
+      <div class="loading-bar" style="display:none;">
+        <div class="num-bar"></div>
+      </div>
+      <span class="text"> </span>
+      <div class="num" style="display:none;">0%</div>
+    </div>
+    <!-- 页面[start]-->
+    <div class="start page" template="start" style="display: none;">
+      <div class="so sos-0">
+        <img class="so sos-1" src="./static/images/start130.png" o-tap="start()" o-animation="shrink">
+        <img class="so sos-2" src="./static/images/start123.png">
+        <img class="so sos-3" src="./static/images/start122.png" o-animation="flicker">
+        <img class="so glass" src="./static/images/glass.png">
+        <img class="so info" src="./static/images/info.png">
+        <div class="so sos-4">
+          <img class="so sos-5" src="./static/images/start119.png" o-animation="floatUpDown2">
+          <img class="so sos-6" src="./static/images/start117.png" o-animation="floatUpDown">
+          <img class="so sos-7" src="./static/images/start115.png" o-animation="floatUpDown2">
+          <img class="so sos-8" src="./static/images/start113.png" o-animation="floatUpDown">
+          <img class="so sos-9" src="./static/images/start111.png" o-animation="floatUpDown3">
+        </div>
+        <img class="so sos-10" src="./static/images/start18.png">
+        <img class="so sos-11" src="./static/images/start16.png" o-animation="flicker2">
+        <img class="so sos-12" src="./static/images/start14.jpg">
+      </div>
+    </div>
+    <!-- 页面[page1]-->
+    <div class="page-1 page" template="page1" style="display: none;">
+      <div class="box so so-0">
+        <img class="so so-1" src="./static/images/17.png">
+        <img class="so so-2" src="./static/images/15.png">
+        <img class="so so-3" src="./static/images/14.png">
+        <img class="so so-4" src="./static/images/11.png" o-animation="floatUpDownSmall">
+        <img class="so so-5" src="./static/images/10.png" o-animation="floatUpDownSmall">
+        <img class="so so-6" src="./static/images/9.png">
+        <img class="so so-7" src="./static/images/8.png">
+        <img class="so so-8" src="./static/images/7.png" o-animation="shrink" o-tap="check(0, 0, 'so7-0')">
+        <img class="so so-9" src="./static/images/5.png" o-animation="shrink" o-tap="check(0, 1, 'so2-0')">
+        <img class="so so-10" src="./static/images/3.jpg">
+      </div>
+      <div class="box so so2-0" style="opacity: 0;display: none;">
+        <img class="so so2-1" src="./static/images/page2-26.png">
+        <img class="so so2-2" src="./static/images/page2-27.png">
+        <div class="ans-box-2">
+          <img class="so so2-3" src="./static/images/page2-28.png" o-tap="check(1, 0, 'so3-0')">
+          <img class="so so2-4" src="./static/images/page2-29.png" o-tap="check(1, 1, 'so3-0')">
+          <img class="so so2-5" src="./static/images/page2-30.png" o-tap="check(1, 2, 'so3-0')">
+        </div>
+        <img class="so so2-6" src="./static/images/page2-6.png">
+        <div class="so so2-7" o-animation="flicker32"></div>
+        <img class="so so2-8" src="./static/images/page2-25.jpg">
+      </div>
+      <div class="box so so3-0" style="opacity: 0;display: none;">
+        <img class="so so3-1" src="./static/images/page3-18.png">
+        <img class="so so3-2" src="./static/images/page3-23.png" o-animation="floatUpDownSmall">
+        <img class="so so3-3" src="./static/images/page3-13.png">
+        <div class="ans-box-3">
+          <img class="so so3-4" src="./static/images/page3-22.png" o-tap="check(2, 0, 'so4-0')">
+          <img class="so so3-5" src="./static/images/page3-21.png" o-tap="check(2, 1, 'so4-0')">
+          <img class="so so3-6" src="./static/images/page3-20.png" o-tap="check(2, 2, 'so4-0')">
+        </div>
+        <img class="so so3-7" src="./static/images/page3-3.jpg">
+      </div>
+      <div class="box so so4-0" style="opacity: 0;display: none;">
+        <img class="so so4-1" src="./static/images/page4-16.png" o-tap="check(3, 0, 'so5-0')">
+        <img class="so so4-2" src="./static/images/page4-17.png" o-tap="check(3, 1, 'so5-0')">
+        <img class="so so4-3" src="./static/images/page4-18.png" o-tap="check(3, 2, 'so5-0')">
+        <img class="so so4-4" src="./static/images/page4-6.png">
+        <img class="so so4-5" src="./static/images/page4-5.png">
+        <img class="so so4-6" src="./static/images/page4-4.png" o-animation="flicker">
+        <img class="so so4-7" src="./static/images/page4-3.jpg">
+      </div>
+      <div class="box so so5-0" style="opacity: 0;display: none;">
+        <img class="so so5-1" src="./static/images/page5-22.png" o-animation="floatUpDownSmall">
+        <img class="so so5-2" src="./static/images/page5-13.png">
+        <div class="ans-box-5">
+          <img class="so so5-3" src="./static/images/page5-21.png" o-tap="check(4, 0, 'so6-0')">
+          <img class="so so5-4" src="./static/images/page5-20.png" o-tap="check(4, 1, 'so6-0')">
+          <img class="so so5-5" src="./static/images/page5-19.png" o-tap="check(4, 2, 'so6-0')">
+        </div>
+        <img class="so so5-6" src="./static/images/page5-3.jpg">
+      </div>
+      <div class="box so so6-0" style="opacity: 0;display: none;">
+        <img class="so so6-2" src="./static/images/page6-23.png" o-animation="floatUpDownSmall">
+        <img class="so so6-3" src="./static/images/page6-14.png">
+        <div class="ans-box-6">
+          <img class="so so6-4" src="./static/images/page6-20.png" o-tap="check(5, 0, 'page2')">
+          <img class="so so6-5" src="./static/images/page6-21.png" o-tap="check(5, 1, 'page2')">
+          <img class="so so6-6" src="./static/images/page6-22.png" o-tap="check(5, 2, 'page2')">
+        </div>
+        <img class="so so6-7" src="./static/images/page6-4.png">
+        <img class="so so6-8" src="./static/images/page6-3.png">
+      </div>
+      <div class="box so so7-0" style="opacity: 0;display: none;">
+        <div class="ans-box-7">
+          <img class="so so7-1" src="./static/images/page7-75.png" o-tap="check(6, 0, 'so8-0')">
+          <img class="so so7-2" src="./static/images/page7-73.png" o-tap="check(6, 1, 'so8-0')">
+          <img class="so so7-3" src="./static/images/page7-71.png" o-tap="check(6, 2, 'so8-0')">
+          <img class="so so7-4" src="./static/images/page7-92.png">
+        </div>
+        <img class="so so7-5" src="./static/images/page7-85.png">
+        <img class="so so7-6" src="./static/images/page7-86.jpg">
+      </div>
+      <div class="box so so8-0" style="opacity: 0;display: none;">
+        <img class="so so8-1" src="./static/images/page8-62.png">
+        <img class="so so8-2" src="./static/images/page8-45.png">
+        <img class="so so8-3" src="./static/images/page8-44.png">
+        <div class="ans-box-8">
+          <img class="so so8-4" src="./static/images/page8-43.png" o-tap="check(7, 0, 'so9-0')">
+          <img class="so so8-5" src="./static/images/page8-41.png" o-tap="check(7, 1, 'so9-0')">
+          <img class="so so8-6" src="./static/images/page8-39.png" o-tap="check(7, 2, 'so9-0')">
+          <img class="so so8-7" src="./static/images/page8-69.png">
+        </div>
+        <img class="so so8-8" src="./static/images/page8-66.png" o-animation="flicker">
+        <img class="so so8-9" src="./static/images/page8-67.png" o-animation="flicker">
+        <img class="so so8-10" src="./static/images/page8-68.jpg">
+      </div>
+      <div class="box so so9-0" style="opacity: 0;display: none;">
+        <img class="so so9-1" src="./static/images/page9-90.png">
+        <div class="ans-box-9">
+          <img class="so so9-2" src="./static/images/page9-91.png" o-tap="check(8, 0, 'so10-0')">
+          <img class="so so9-3" src="./static/images/page9-92.png" o-tap="check(8, 1, 'so10-0')">
+          <img class="so so9-4" src="./static/images/page9-93.png" o-tap="check(8, 2, 'so10-0')">
+        </div>
+        <img class="so so9-5" src="./static/images/page9-94.jpg">
+      </div>
+      <div class="box so so10-0" style="opacity: 0;display: none;">
+        <img class="so so10-1" src="./static/images/page10-65.png">
+        <div class="ans-box-10">
+          <img class="so so10-2" src="./static/images/page10-66.png" o-tap="check(9, 0, 'so11-0')">
+          <img class="so so10-3" src="./static/images/page10-67.png" o-tap="check(9, 1, 'so11-0')">
+          <img class="so so10-4" src="./static/images/page10-68.png" o-tap="check(9, 2, 'so11-0')">
+        </div>
+        <img class="so so10-5" src="./static/images/page10-71.png" o-animation="flicker">
+        <img class="so so10-6" src="./static/images/page10-73.jpg">
+      </div>
+      <div class="box so so11-0" style="opacity: 0;display: none;">
+        <img class="so so11-1" src="./static/images/page11-65.png">
+        <div class="ans-box-11">
+          <img class="so so11-2" src="./static/images/page11-66.png" o-tap="check(10, 0, 'page2')">
+          <img class="so so11-3" src="./static/images/page11-67.png" o-tap="check(10, 1, 'page2')">
+          <img class="so so11-4" src="./static/images/page11-68.png" o-tap="check(10, 2, 'page2')">
+        </div>
+        <div class="left-ani">
+          <img class="so so11-5" src="./static/images/page11-13.png">
+          <img class="so so11-6" src="./static/images/page11-69.png" o-animation="flicker">
+        </div>
+        <img class="so so11-7" src="./static/images/page11-70.png">
+        <img class="so so11-8" src="./static/images/page11-71.png">
+        <img class="so so11-9" src="./static/images/page11-3.jpg">
+      </div>
+    </div>
+    <!-- 页面[page2]-->
+    <div class="page-2 page" template="page2" style="display: none;">
+      <div class="so so-0" >
+        <img class="so so-1" src="./static/images/ing-11.png" o-animation="floatUpDownSmall">
+        <img class="so so-2" src="./static/images/ing-9.png" o-animation="flicker2" go="page3//scaleDown/scaleUpDown/true/scaleDown/scaleUp">
+        <img class="so so-3" src="./static/images/ing-7.png">
+        <img class="so so-4" src="./static/images/ing-6.png" o-animation="floatUpDown">
+        <img class="so so-5" src="./static/images/ing-5.png" o-animation="flicker">
+        <img class="so so-6" src="./static/images/ing-3.jpg">
+      </div>
+    </div>
+    <!-- 页面[page3]-->
+    <div class="page3 page" template="page3" style="display: none;">
+      <img class="so so-0" src="./static/images/end-95.jpg">
+      <img class="so so-1" style="width: 590px;height: 1048px;" src="./static/images/share1.jpg">
+      <img class="so so-2" src="./static/images/end-94.png" o-animation="flicker">
+      <img class="so so-3" src="./static/images/end-93.png" o-tap="location.reload()">
+      <img class="so so-4" src="./static/images/end-68.png" o-animation="flicker">
+    </div>
+  </div>
+  <!-- 插件[music]-->
+  <div class="music-menu owo-block" template="music" style="display: none;">
+    <img class="music-icon" src="./static/images/page6-18.png" o-tap="switchPlay">
+  </div>
+
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    owo.script = {
+      "loading": {
+        "data": {
+          "imgList": [
+            "./static/images/page3-3.jpg",
+            "./static/images/page8-68.jpg",
+            "./static/images/end-80.png",
+            "./static/images/page11-3.jpg",
+            "./static/images/page5-3.jpg",
+            "./static/images/page10-73.jpg",
+            "./static/images/page9-94.jpg",
+            "./static/images/page4-3.jpg",
+            "./static/images/page2-25.jpg",
+            "./static/images/ing-3.jpg",
+            "./static/images/3.jpg",
+            "./static/images/end-95.jpg",
+            "./static/images/start-4.jpg",
+            "./static/images/start14.jpg",
+            "./static/images/page7-86.jpg",
+            "./static/images/start122.png",
+            "./static/images/end-68.png",
+            "./static/images/page2-5.png",
+            "./static/images/page10-71.png",
+            "./static/images/page2-6.png",
+            "./static/images/glass.png",
+            "./static/images/page6-3.png",
+            "./static/images/page11-70.png",
+            "./static/images/ing-6.png",
+            "./static/images/page11-69.png",
+            "./static/images/14.png",
+            "./static/images/page6-4.png",
+            "./static/images/page11-71.png",
+            "./static/images/start16.png",
+            "./static/images/page11-65.png",
+            "./static/images/page9-90.png",
+            "./static/images/page3-13.png",
+            "./static/images/start18.png",
+            "./static/images/page10-65.png",
+            "./static/images/page4-6.png",
+            "./static/images/page2-27.png",
+            "./static/images/page6-14.png",
+            "./static/images/page8-62.png",
+            "./static/images/page5-13.png",
+            "./static/images/page7-85.png",
+            "./static/images/start111.png",
+            "./static/images/9.png",
+            "./static/images/page11-67.png",
+            "./static/images/page8-69.png",
+            "./static/images/page5-21.png",
+            "./static/images/page6-22.png",
+            "./static/images/page5-20.png",
+            "./static/images/page7-92.png",
+            "./static/images/start123.png",
+            "./static/images/page3-20.png",
+            "./static/images/page9-93.png",
+            "./static/images/page11-13.png",
+            "./static/images/page6-21.png",
+            "./static/images/page10-68.png",
+            "./static/images/end-93.png",
+            "./static/images/start130.png",
+            "./static/images/ing-5.png",
+            "./static/images/page6-20.png",
+            "./static/images/page4-5.png",
+            "./static/images/end-94.png",
+            "./static/images/page9-92.png",
+            "./static/images/page3-21.png",
+            "./static/images/page11-68.png",
+            "./static/images/page5-19.png",
+            "./static/images/page11-66.png",
+            "./static/images/page3-22.png",
+            "./static/images/page9-91.png",
+            "./static/images/page10-66.png",
+            "./static/images/page10-67.png",
+            "./static/images/start113.png",
+            "./static/images/page3-18.png",
+            "./static/images/page2-29.png",
+            "./static/images/page7-73.png",
+            "./static/images/page2-30.png",
+            "./static/images/page7-75.png",
+            "./static/images/page2-28.png",
+            "./static/images/7.png",
+            "./static/images/ing-9.png",
+            "./static/images/page4-16.png",
+            "./static/images/5.png",
+            "./static/images/page7-71.png",
+            "./static/images/page4-18.png",
+            "./static/images/page8-43.png",
+            "./static/images/page8-41.png",
+            "./static/images/start-8.png",
+            "./static/images/ing-7.png",
+            "./static/images/page4-17.png",
+            "./static/images/page8-39.png",
+            "./static/images/start117.png",
+            "./static/images/info.png",
+            "./static/images/17.png",
+            "./static/images/page3-23.png",
+            "./static/images/start115.png",
+            "./static/images/15.png",
+            "./static/images/page6-18.png",
+            "./static/images/page4-4.png",
+            "./static/images/page6-23.png",
+            "./static/images/start119.png",
+            "./static/images/page5-22.png",
+            "./static/images/page2-26.png",
+            "./static/images/11.png",
+            "./static/images/10.png",
+            "./static/images/ing-11.png",
+            "./static/images/page8-66.png",
+            "./static/images/page8-67.png",
+            "./static/images/page8-44.png",
+            "./static/images/8.png",
+            "./static/images/page8-45.png"
+          ]
+        },
+        "show": function show() {
+          var mum = owo.query('.num')[0];
+          var numBar = owo.query('.num-bar')[0];
+          this.preloadImages(this.data.imgList, function(e) {
+            setTimeout(function() {
+              owo.go('start////true');
+            }, 500);
+          }, function(num) {
+            numBar.style.width = num + '%';
+            mum.innerHTML = num + '%';
+          });
+        },
+        "preloadImage": function preloadImage(src, successFn) {
+          var image = new Image();
+          image.src = src;
+
+          image.onload = function() {
+            successFn && successFn(src);
+          };
+
+          image.onerror = function(error) {
+            successFn && successFn(src);
+          };
+        },
+        "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
+          var _this = this;
+
+          if (!Array.isArray(srcs)) {
+            console.log('第一个参数只能是一个数组');
+          } else {
+            var allCount = srcs.length;
+            var doneCount = 0;
+            srcs.forEach(function(srcItem) {
+              _this.preloadImage(srcItem, function() {
+                doneCount++;
+                progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
+
+                if (doneCount === allCount) {
+                  doneFn && doneFn();
+                }
+              });
+            });
+          }
+        }
+      },
+      "start": {
+        "created": function created() {
+          owo.animate('bounceInDown', this.query('.sos-10'));
+        },
+        "start": function start() {
+          owo.script.music.play();
+          owo.go('page1//scaleDown/scaleUpDown/true/scaleDown/scaleUp');
+        }
+      },
+      "page1": {
+        "data": {
+          "numList": [0, 0, 0, 0]
+        },
+        "created": function created() {
+          owo.animate('fadeInDown', this.query('.so-3'));
+        },
+        "check": function check(ind1, ind2, ind3) {
+          if (ind1 == 0) {
+            this.data.numList[0] = parseInt(ind2)
+          } else {
+            this.data.numList[parseInt(ind2) + 1] += 1
+          }
+          var _this2 = this;
+
+          this.$target.setAttribute('o-animation', '');
+          this.$target.style.transition = 'transform 0.2s';
+          setTimeout(function() {
+            _this2.$target.style.transform = 'scale(1.1)';
+          }, 0);
+
+          if (ind3 == 'page2') {
+            owo.go('page2////true//');
+          }
+
+          setTimeout(function() {
+            document.querySelectorAll('.box').forEach(function(element) {
+              element.style.opacity = 0;
+            });
+            setTimeout(function() {
+              _this2.$target.parentNode.style.display = 'none';
+            }, 2000);
+            if (document.querySelector('.' + ind3)) {
+              document.querySelector('.' + ind3).style.display = 'block';
+              setTimeout(function() {
+                document.querySelector('.' + ind3).style.opacity = 1;
+              }, 100);
+            }
+            
+
+            if (ind3 == 'so2-0') {
+              owo.animate('fadeInRight', _this2.query('.so2-6'), 600);
+              owo.animate('fadeInLeft', _this2.query('.ans-box-2'), 600);
+            }
+
+            if (ind3 == 'so3-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-3'), 600);
+            }
+
+            if (ind3 == 'so5-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-5'), 600);
+            }
+
+            if (ind3 == 'so6-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-6'), 1200);
+              owo.animate('slideInUp', _this2.query('.so6-7'), 600);
+            }
+
+            if (ind3 == 'so7-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-7'), 600);
+            }
+
+            if (ind3 == 'so8-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-8'), 600);
+            }
+
+            if (ind3 == 'so9-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-9'), 600);
+            }
+
+            if (ind3 == 'so10-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-10'), 600);
+            }
+
+            if (ind3 == 'so11-0') {
+              owo.animate('fadeInLeft', _this2.query('.ans-box-11'), 1200);
+              owo.animate('fadeInRight', _this2.query('.left-ani'), 600);
+            }
+          }, 200);
+        }
+      },
+      "page2": {
+        "show": function show() {
+          if (!owo.script.page1.data.numList) owo.script.page1.data.numList = [0, 0, 0, 0]
+          if (owo.script.page1.data.numList[0] == 0) {
+            if (owo.script.page1.data.numList[1] >= 3) {
+              document.querySelector('.page3 .so-1').src = './static/images/share1.jpg'
+            } else if (owo.script.page1.data.numList[2] >= 3) {
+              document.querySelector('.page3 .so-1').src = './static/images/share5.jpg'
+            } else if (owo.script.page1.data.numList[3] >= 3) {
+              document.querySelector('.page3 .so-1').src = './static/images/share3.jpg'
+            } else if (owo.script.page1.data.numList[1] >= 2 && owo.script.page1.data.numList[2] >= 2) {
+              document.querySelector('.page3 .so-1').src = ['./static/images/share1.jpg', './static/images/share5.jpg'][Tool.num.randomNum(0, 1)]
+            } else {
+              document.querySelector('.page3 .so-1').src = ['./static/images/share3.jpg', './static/images/share5.jpg'][Tool.num.randomNum(0, 1)]
+            }
+          } else {
+            if (owo.script.page1.data.numList[1] >= 3) {
+              document.querySelector('.page3 .so-1').src = './static/images/share2.jpg'
+            } else if (owo.script.page1.data.numList[2] >= 3) {
+              document.querySelector('.page3 .so-1').src = './static/images/share4.jpg'
+            } else if (owo.script.page1.data.numList[3] >= 3) {
+              document.querySelector('.page3 .so-1').src = './static/images/share6.jpg'
+            } else if (owo.script.page1.data.numList[1] >= 2 && owo.script.page1.data.numList[2] >= 2) {
+              document.querySelector('.page3 .so-1').src = ['./static/images/share2.jpg', './static/images/share4.jpg'][Tool.num.randomNum(0, 1)]
+            } else {
+              document.querySelector('.page3 .so-1').src = ['./static/images/share6.jpg', './static/images/share4.jpg'][Tool.num.randomNum(0, 1)]
+            }
+          }
+          setTimeout(function() {
+            owo.go('page3//scaleDown/scaleUpDown/true/scaleDown/scaleUp');
+          }, 3000);
+        }
+      },
+      "page3": {},
+      "music": {
+        "data": {
+          "music": null,
+          "musicIsPlay": false
+        },
+        "switchPlay": function switchPlay() {
+          this.data.musicIsPlay ? this.pause() : this.play();
+        },
+        "play": function play() {
+          console.log('播放音乐');
+
+          if (!this.data.musicIsPlay) {
+            this.data.musicIsPlay = true;
+            this.data.music = new Audio("http://flv4.people.com.cn/videofile7//pvmsvideo/2021/10/2/QuanMeiTiZhiZuoErBu-YangBin_090a1dc5772d0d50b9103157cc410a10.mp3");
+            this.data.music.volume = 0.5;
+            this.data.music.loop = true;
+            this.data.music.play();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.classList.add('active');
+          }
+        },
+        "pause": function pause() {
+          if (this.data.musicIsPlay) {
+            this.data.musicIsPlay = false;
+            this.data.music.pause();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.classList.remove('active');
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
+
+</body>
+
+</html>

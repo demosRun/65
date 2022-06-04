@@ -1,0 +1,42 @@
+<template lang="pug">
+.page3
+  img.so.so-0(src="@|end-95.jpg|")
+  img.so.so-1(src="@|end-80.png|")
+  img.so.so-2(src="@|end-94.png|"  o-animation="flicker")
+  img.so.so-3(src="@|end-93.png|" onclick="location.reload()")
+  img.so.so-4(src="@|end-68.png|"  o-animation="flicker")
+
+</template>
+<script>
+module.exports = {
+  
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+.so-1 {
+  left: 82px;
+  top: 101px;
+  z-index: 3;
+}
+.so-2 {
+  left: 249px;
+  top: 1166px;
+  z-index: 2;
+}
+.so-3 {
+  left: 212px;
+  top: 1217px;
+  z-index: 1;
+}
+.so-4 {
+  left: 0px;
+  top: 0px;
+  z-index: 5;
+  pointer-events: none;
+}
+</style>

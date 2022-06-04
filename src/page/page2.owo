@@ -1,0 +1,58 @@
+<template lang="pug">
+.page-2
+  .so.so-0
+    img.so.so-1(src="@|ing-11.png|" o-animation="floatUpDownSmall")
+    img.so.so-2(src="@|ing-9.png|" o-animation="flicker2")
+    img.so.so-3(src="@|ing-7.png|")
+    img.so.so-4(src="@|ing-6.png|" o-animation="floatUpDown")
+    img.so.so-5(src="@|ing-5.png|" o-animation="flicker")
+    img.so.so-6(src="@|ing-3.jpg|")
+</template>
+<script>
+module.exports = {
+  show: function () {
+    setTimeout(() => {
+      owo.go('page3//scaleDown/scaleUpDown/true/scaleDown/scaleUp')
+    }, 4000);
+  }
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 516px;
+  top: 744px;
+  z-index: -1;
+}
+.so-2 {
+  left: 57px;
+  top: 239px;
+  z-index: -2;
+}
+.so-3 {
+  left: 137px;
+  top: 656px;
+  z-index: -3;
+}
+.so-4 {
+  left: 203px;
+  top: 355px;
+  z-index: -4;
+}
+.so-5 {
+  left: 164px;
+  top: 939px;
+  z-index: -5;
+}
+.so-6 {
+  left: 0px;
+  top: 0px;
+  z-index: -6;
+}
+</style>

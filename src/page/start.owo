@@ -1,0 +1,112 @@
+<template lang="pug">
+.start
+  .so.sos-0
+    img.so.sos-1(src="@|start130.png|" o-tap="start()" o-animation="shrink")
+    img.so.sos-2(src="@|start123.png|")
+    img.so.sos-3(src="@|start122.png|" o-animation="flicker")
+    img.so.glass(src="@|glass.png|")
+    img.so.info(src="@|info.png|")
+    .so.sos-4
+      img.so.sos-5(src="@|start119.png|" o-animation="floatUpDown2")
+      img.so.sos-6(src="@|start117.png|" o-animation="floatUpDown")
+      img.so.sos-7(src="@|start115.png|" o-animation="floatUpDown2")
+      img.so.sos-8(src="@|start113.png|" o-animation="floatUpDown")
+      img.so.sos-9(src="@|start111.png|" o-animation="floatUpDown3")
+    img.so.sos-10(src="@|start18.png|")
+    img.so.sos-11(src="@|start16.png|" o-animation="flicker2")
+    img.so.sos-12(src="@|start14.jpg|")
+
+</template>
+<script>
+module.exports = {
+  created: function () {
+    owo.animate('bounceInDown', this.query('.sos-10'))
+  },
+  start: function () {
+    owo.script.music.play()
+    owo.go('page1//scaleDown/scaleUpDown/true/scaleDown/scaleUp')
+  }
+}
+</script>
+<style lang="less">
+.sos-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.sos-1 {
+  left: 216px;
+  top: 1017px;
+  z-index: -1;
+}
+.sos-2 {
+  left: 39px;
+  top: 150px;
+  z-index: -2;
+}
+.sos-3 {
+  left: 0px;
+  top: 0px;
+  z-index: -3;
+}
+.sos-4 {
+  left: 46px;
+  top: 545px;
+  width: 629px;
+  height: 589px;
+  z-index: -4;;
+}
+.sos-5 {
+  left: 532px;
+  top: 390px;
+  z-index: -5;
+}
+.sos-6 {
+  left: 566px;
+  top: 535px;
+  z-index: -6;
+}
+.sos-7 {
+  left: 128px;
+  top: 0px;
+  z-index: -7;
+}
+.sos-8 {
+  left: 0px;
+  top: 329px;
+  z-index: -8;
+}
+.sos-9 {
+  left: 490px;
+  top: 22px;
+  z-index: -9;
+}
+.sos-10 {
+  left: 74px;
+  top: 239px;
+  z-index: -10;
+}
+.sos-11 {
+  left: 168px;
+  top: 535px;
+  z-index: -11;
+}
+.sos-12 {
+  left: 0px;
+  top: 0px;
+  z-index: -12;
+}
+.glass {
+  bottom: 0;
+  left: 0;
+}
+.info {
+  position: absolute;
+  bottom: 350px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+</style>

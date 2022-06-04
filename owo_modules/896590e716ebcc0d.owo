@@ -1,0 +1,219 @@
+<template lang="pug">
+.loading-box
+  img.loading(src="@|start-8.png|" o-animation="flicker")
+  .loading-bar(style="display:none;")
+    .num-bar
+  span.text 
+  .num(style="display:none;") 0%
+</template>
+
+<script>
+  module.exports = {
+    data: {
+      imgList: [
+        "page3-3.jpg",
+        "page8-68.jpg",
+        "end-80.png",
+        "page11-3.jpg",
+        "page5-3.jpg",
+        "page10-73.jpg",
+        "page9-94.jpg",
+        "page4-3.jpg",
+        "page2-25.jpg",
+        "ing-3.jpg",
+        "3.jpg",
+        "end-95.jpg",
+        "start-4.jpg",
+        "start14.jpg",
+        "page7-86.jpg",
+        "start122.png",
+        "end-68.png",
+        "page2-5.png",
+        "page10-71.png",
+        "page2-6.png",
+        "glass.png",
+        "page6-3.png",
+        "page11-70.png",
+        "ing-6.png",
+        "page11-69.png",
+        "14.png",
+        "page6-4.png",
+        "page11-71.png",
+        "start16.png",
+        "page11-65.png",
+        "page9-90.png",
+        "page3-13.png",
+        "start18.png",
+        "page10-65.png",
+        "page4-6.png",
+        "page2-27.png",
+        "page6-14.png",
+        "page8-62.png",
+        "page5-13.png",
+        "page7-85.png",
+        "start111.png",
+        "9.png",
+        "page11-67.png",
+        "page8-69.png",
+        "page5-21.png",
+        "page6-22.png",
+        "page5-20.png",
+        "page7-92.png",
+        "start123.png",
+        "page3-20.png",
+        "page9-93.png",
+        "page11-13.png",
+        "page6-21.png",
+        "page10-68.png",
+        "end-93.png",
+        "start130.png",
+        "ing-5.png",
+        "page6-20.png",
+        "page4-5.png",
+        "end-94.png",
+        "page9-92.png",
+        "page3-21.png",
+        "page11-68.png",
+        "page5-19.png",
+        "page11-66.png",
+        "page3-22.png",
+        "page9-91.png",
+        "page10-66.png",
+        "page10-67.png",
+        "start113.png",
+        "page3-18.png",
+        "page2-29.png",
+        "page7-73.png",
+        "page2-30.png",
+        "page7-75.png",
+        "page2-28.png",
+        "7.png",
+        "ing-9.png",
+        "page4-16.png",
+        "5.png",
+        "page7-71.png",
+        "page4-18.png",
+        "page8-43.png",
+        "page8-41.png",
+        "start-8.png",
+        "ing-7.png",
+        "page4-17.png",
+        "page8-39.png",
+        "start117.png",
+        "info.png",
+        "17.png",
+        "page3-23.png",
+        "start115.png",
+        "15.png",
+        "page6-18.png",
+        "page4-4.png",
+        "page6-23.png",
+        "start119.png",
+        "page5-22.png",
+        "page2-26.png",
+        "11.png",
+        "10.png",
+        "ing-11.png",
+        "page8-66.png",
+        "page8-67.png",
+        "page8-44.png",
+        "8.png",
+        "page8-45.png",
+      ]
+    },
+    show: function () {
+      const mum = owo.query('.num')[0]
+      const numBar = owo.query('.num-bar')[0]
+      this.preloadImages(this.data.imgList, (e) => {
+        setTimeout(() => {
+          owo.go('start////true')
+        }, 500)
+      }, (num) => {
+        numBar.style.width = num + '%'
+        mum.innerHTML = num + '%'
+      })
+    },
+    preloadImage: function (src, successFn) {
+      var image = new Image()
+      image.src = src
+      image.onload = function () {
+        successFn && successFn(src)
+      }
+      image.onerror = function (error) {
+        successFn && successFn(src)
+      }
+    },
+    preloadImages: function (srcs, doneFn, progressFn) {
+      if (!Array.isArray(srcs)) {
+        console.log('第一个参数只能是一个数组')
+      } else {
+        var allCount = srcs.length
+        var doneCount = 0
+        srcs.forEach((srcItem) => {
+          this.preloadImage(srcItem, function () {
+            doneCount++
+            progressFn && progressFn(Math.ceil(100 * doneCount / allCount))
+            if (doneCount === allCount) {
+              doneFn && doneFn()
+            }
+          })
+        })
+      }
+    }
+  }
+</script>
+
+
+<style lang="less">
+.loading-box {
+  width: 100%;
+  height: 100%;
+  background-image: url('@|start-4.jpg|');
+}
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 7%;
+  bottom: 0;
+  margin: auto;
+}
+.loading-bar {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  height: 20px;
+  background-color: #fdbb45;
+  width: 80%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 2px 3px 9px #5d739c;
+}
+.num-bar {
+  background-color: #fd4b0d;
+  height: 20px;
+  border-radius: 20px;
+  width: 0%;
+  transition: width 0.5s;
+}
+.num, .text {
+  position: absolute;
+  top: 0%;
+  bottom: -8%;
+  margin: auto;
+  line-height: 50px;
+  height: 50px;
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  color: #fd4b0d;
+  font-weight: bold;
+}
+.text {
+  bottom: -14%;
+} 
+</style>
+ 

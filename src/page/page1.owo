@@ -1,0 +1,669 @@
+<template lang="pug">
+.page-1
+  .box.so.so-0
+    img.so.so-1(src="@|17.png|")
+    img.so.so-2(src="@|15.png|")
+    img.so.so-3(src="@|14.png|")
+    img.so.so-4(src="@|11.png|" o-animation="floatUpDownSmall")
+    img.so.so-5(src="@|10.png|" o-animation="floatUpDownSmall")
+    img.so.so-6(src="@|9.png|")
+    img.so.so-7(src="@|8.png|")
+    img.so.so-8(src="@|7.png|" o-animation="shrink" o-tap="check(0, 0, 'so7-0')")
+    img.so.so-9(src="@|5.png|" o-animation="shrink" o-tap="check(0, 1, 'so2-0')")
+    img.so.so-10(src="@|3.jpg|")
+  .box.so.so2-0(style="opacity: 0;display: none;")
+    img.so.so2-1(src="@|page2-26.png|")
+    img.so.so2-2(src="@|page2-27.png|")
+    .ans-box-2
+      img.so.so2-3(src="@|page2-28.png|" o-tap="check(1, 0, 'so3-0')")
+      img.so.so2-4(src="@|page2-29.png|" o-tap="check(1, 1, 'so3-0')")
+      img.so.so2-5(src="@|page2-30.png|" o-tap="check(1, 2, 'so3-0')")
+    img.so.so2-6(src="@|page2-6.png|")
+    .so.so2-7(o-animation="flicker32")
+    img.so.so2-8(src="@|page2-25.jpg|")
+  .box.so.so3-0(style="opacity: 0;display: none;")
+    img.so.so3-1(src="@|page3-18.png|")
+    img.so.so3-2(src="@|page3-23.png|" o-animation="floatUpDownSmall")
+    img.so.so3-3(src="@|page3-13.png|")
+    .ans-box-3
+      img.so.so3-4(src="@|page3-22.png|" o-tap="check(2, 0, 'so4-0')")
+      img.so.so3-5(src="@|page3-21.png|" o-tap="check(2, 1, 'so4-0')")
+      img.so.so3-6(src="@|page3-20.png|" o-tap="check(2, 2, 'so4-0')")
+    img.so.so3-7(src="@|page3-3.jpg|")
+  .box.so.so4-0(style="opacity: 0;display: none;")
+    img.so.so4-1(src="@|page4-16.png|" o-tap="check(3, 0, 'so5-0')")
+    img.so.so4-2(src="@|page4-17.png|" o-tap="check(3, 1, 'so5-0')")
+    img.so.so4-3(src="@|page4-18.png|" o-tap="check(3, 2, 'so5-0')")
+    img.so.so4-4(src="@|page4-6.png|")
+    img.so.so4-5(src="@|page4-5.png|")
+    img.so.so4-6(src="@|page4-4.png|" o-animation="flicker")
+    img.so.so4-7(src="@|page4-3.jpg|")
+  .box.so.so5-0(style="opacity: 0;display: none;")
+    img.so.so5-1(src="@|page5-22.png|" o-animation="floatUpDownSmall")
+    img.so.so5-2(src="@|page5-13.png|")
+    .ans-box-5
+      img.so.so5-3(src="@|page5-21.png|" o-tap="check(4, 0, 'so6-0')")
+      img.so.so5-4(src="@|page5-20.png|" o-tap="check(4, 1, 'so6-0')")
+      img.so.so5-5(src="@|page5-19.png|" o-tap="check(4, 2, 'so6-0')")
+    img.so.so5-6(src="@|page5-3.jpg|")
+  .box.so.so6-0(style="opacity: 0;display: none;")
+    img.so.so6-2(src="@|page6-23.png|" o-animation="floatUpDownSmall")
+    img.so.so6-3(src="@|page6-14.png|")
+    .ans-box-6
+      img.so.so6-4(src="@|page6-20.png|" o-tap="check(5, 0, 'page2')")
+      img.so.so6-5(src="@|page6-21.png|" o-tap="check(5, 1, 'page2')")
+      img.so.so6-6(src="@|page6-22.png|" o-tap="check(5, 2, 'page2')")
+    img.so.so6-7(src="@|page6-4.png|")
+    img.so.so6-8(src="@|page6-3.png|")
+  .box.so.so7-0(style="opacity: 0;display: none;")
+    .ans-box-7
+      img.so.so7-1(src="@|page7-75.png|"  o-tap="check(6, 0, 'so8-0')")
+      img.so.so7-2(src="@|page7-73.png|"  o-tap="check(6, 1, 'so8-0')")
+      img.so.so7-3(src="@|page7-71.png|"  o-tap="check(6, 2, 'so8-0')")
+      img.so.so7-4(src="@|page7-92.png|")
+    img.so.so7-5(src="@|page7-85.png|")
+    img.so.so7-6(src="@|page7-86.jpg|")
+  .box.so.so8-0(style="opacity: 0;display: none;")
+    img.so.so8-1(src="@|page8-62.png|")
+    img.so.so8-2(src="@|page8-45.png|")
+    img.so.so8-3(src="@|page8-44.png|")
+    .ans-box-8
+      img.so.so8-4(src="@|page8-43.png|" o-tap="check(7, 0, 'so9-0')")
+      img.so.so8-5(src="@|page8-41.png|" o-tap="check(7, 1, 'so9-0')")
+      img.so.so8-6(src="@|page8-39.png|" o-tap="check(7, 2, 'so9-0')")
+      img.so.so8-7(src="@|page8-69.png|")
+    img.so.so8-8(src="@|page8-66.png|" o-animation="flicker")
+    img.so.so8-9(src="@|page8-67.png|" o-animation="flicker")
+    img.so.so8-10(src="@|page8-68.jpg|")
+  .box.so.so9-0(style="opacity: 0;display: none;")
+    img.so.so9-1(src="@|page9-90.png|")
+    .ans-box-9
+      img.so.so9-2(src="@|page9-91.png|" o-tap="check(8, 0, 'so10-0')")
+      img.so.so9-3(src="@|page9-92.png|" o-tap="check(8, 1, 'so10-0')")
+      img.so.so9-4(src="@|page9-93.png|" o-tap="check(8, 2, 'so10-0')")
+    img.so.so9-5(src="@|page9-94.jpg|")
+  .box.so.so10-0(style="opacity: 0;display: none;")
+    img.so.so10-1(src="@|page10-65.png|")
+    .ans-box-10
+      img.so.so10-2(src="@|page10-66.png|" o-tap="check(9, 0, 'so11-0')")
+      img.so.so10-3(src="@|page10-67.png|" o-tap="check(9, 1, 'so11-0')")
+      img.so.so10-4(src="@|page10-68.png|" o-tap="check(9, 2, 'so11-0')")
+    img.so.so10-5(src="@|page10-71.png|" o-animation="flicker")
+    img.so.so10-6(src="@|page10-73.jpg|")
+  .box.so.so11-0(style="opacity: 0;display: none;")
+    img.so.so11-1(src="@|page11-65.png|")
+    .ans-box-11
+      img.so.so11-2(src="@|page11-66.png|" o-tap="check(10, 0, 'page2')")
+      img.so.so11-3(src="@|page11-67.png|" o-tap="check(10, 1, 'page2')")
+      img.so.so11-4(src="@|page11-68.png|" o-tap="check(10, 2, 'page2')")
+    .left-ani
+      img.so.so11-5(src="@|page11-13.png|")
+      img.so.so11-6(src="@|page11-69.png|" o-animation="flicker")
+    img.so.so11-7(src="@|page11-70.png|")
+    img.so.so11-8(src="@|page11-71.png|")
+    img.so.so11-9(src="@|page11-3.jpg|")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.animate('fadeInDown', this.query('.so-3'))
+    },
+    check: function (ind1, ind2, ind3) {
+      this.$target.setAttribute('o-animation', '')
+      
+      this.$target.style.transition = 'transform 0.2s'
+      setTimeout(() => {
+        this.$target.style.transform = 'scale(1.1)'
+      }, 0);
+      if (ind3 == 'page2') {
+        owo.go('page2//scaleDown/scaleUpDown/true/scaleDown/scaleUp')
+      }
+      setTimeout(() => {
+        document.querySelectorAll('.box').forEach(element => {
+          element.style.opacity = 0
+          
+          
+        });
+        setTimeout(() => {
+          this.$target.parentNode.style.display = 'none'
+        }, 2000);
+        document.querySelector('.' + ind3).style.display = 'block'
+        setTimeout(() => {
+          document.querySelector('.' + ind3).style.opacity = 1
+        }, 100);
+        if (ind3 == 'so2-0') {
+          owo.animate('fadeInRight', this.query('.so2-6'), 600)
+          owo.animate('fadeInLeft', this.query('.ans-box-2'), 600)
+        }
+        if (ind3 == 'so3-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-3'), 600)
+        }
+        if (ind3 == 'so5-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-5'), 600)
+        }
+        if (ind3 == 'so6-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-6'), 1200)
+          owo.animate('slideInUp', this.query('.so6-7'), 600)
+        }
+        if (ind3 == 'so7-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-7'), 600)
+        }
+        if (ind3 == 'so8-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-8'), 600)
+        }
+        if (ind3 == 'so9-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-9'), 600)
+        }
+        if (ind3 == 'so10-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-10'), 600)
+        }
+        if (ind3 == 'so11-0') {
+          owo.animate('fadeInLeft', this.query('.ans-box-11'), 1200)
+          owo.animate('fadeInRight', this.query('.left-ani'), 600)
+        }
+      }, 200);
+      
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 520px;
+  top: 473px;
+  z-index: -1;
+}
+.so-2 {
+  left: 603px;
+  top: 352px;
+  z-index: -2;
+}
+.so-3 {
+  left: 0px;
+  top: 6px;
+  z-index: -3;
+}
+.so-4 {
+  left: 255px;
+  top: 634px;
+  z-index: -4;
+}
+.so-5 {
+  left: 449px;
+  top: 796px;
+  z-index: -5;
+}
+.so-6 {
+  left: 132px;
+  top: 646px;
+  z-index: -6;
+}
+.so-7 {
+  left: 215px;
+  top: 748px;
+  z-index: -7;
+}
+.so-8 {
+  left: 272px;
+  top: 335px;
+  z-index: -8;
+}
+.so-9 {
+  left: 272px;
+  top: 1072px;
+  z-index: -9;
+}
+.so-10 {
+  left: 0px;
+  top: 0px;
+  z-index: -10;
+}
+.so2-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so2-1 {
+  left: 346px;
+  top: 478px;
+  z-index: -1;
+}
+.so2-2 {
+  left: 37px;
+  top: 481px;
+  z-index: -2;
+}
+.so2-3 {
+  left: 74px;
+  top: 751px;
+  z-index: -3;
+}
+.so2-4 {
+  left: 74px;
+  top: 887px;
+  z-index: -4;
+}
+.so2-5 {
+  left: 74px;
+  top: 1022px;
+  z-index: -5;
+}
+.so2-6 {
+  left: 213px;
+  top: 974px;
+  z-index: -6;
+}
+.so2-7 {
+  left: 0px;
+  top: 298px;
+  z-index: -7;
+  width: 750px;
+  height: 1127px;
+  background-image: url('@|page2-5.png|');
+}
+.so2-8 {
+  left: 0px;
+  top: 0px;
+  z-index: -8;
+}
+.so3-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so3-1 {
+  left: 378px;
+  top: 1158px;
+  z-index: -1;
+}
+.so3-2 {
+  left: 455px;
+  top: 190px;
+  z-index: -2;
+}
+.so3-3 {
+  left: 31px;
+  top: 192px;
+  z-index: -3;
+}
+.so3-4 {
+  left: 68px;
+  top: 462px;
+  z-index: -4;
+}
+.so3-5 {
+  left: 68px;
+  top: 598px;
+  z-index: -5;
+}
+.so3-6 {
+  left: 68px;
+  top: 733px;
+  z-index: -6;
+}
+.so3-7 {
+  left: 0px;
+  top: 0px;
+  z-index: -7;
+}
+.so4-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so4-1 {
+  left: 154px;
+  top: 455px;
+  z-index: -1;
+}
+.so4-2 {
+  left: 154px;
+  top: 588px;
+  z-index: -2;
+}
+.so4-3 {
+  left: 155px;
+  top: 720px;
+  z-index: -3;
+}
+.so4-4 {
+  left: 37px;
+  top: 162px;
+  z-index: -4;
+}
+.so4-5 {
+  left: 65px;
+  top: 417px;
+  z-index: -5;
+}
+.so4-6 {
+  left: 514px;
+  top: 1325px;
+  z-index: -6;
+}
+.so4-7 {
+  left: 0px;
+  top: 0px;
+  z-index: -7;
+}
+.so5-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so5-1 {
+  left: 381px;
+  top: 679px;
+  z-index: -1;
+}
+.so5-2 {
+  left: 31px;
+  top: 685px;
+  z-index: -2;
+}
+.so5-3 {
+  left: 68px;
+  top: 955px;
+  z-index: -3;
+}
+.so5-4 {
+  left: 68px;
+  top: 1091px;
+  z-index: -4;
+}
+.so5-5 {
+  left: 68px;
+  top: 1226px;
+  z-index: -5;
+}
+.so5-6 {
+  left: 0px;
+  top: 0px;
+  z-index: -6;
+}
+.so6-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so6-1 {
+  left: 644px;
+  top: 46px;
+  z-index: -1;
+}
+.so6-2 {
+  left: 438px;
+  top: 297px;
+  z-index: -2;
+}
+.so6-3 {
+  left: 31px;
+  top: 172px;
+  z-index: -3;
+}
+.so6-4 {
+  left: 68px;
+  top: 440px;
+  z-index: -4;
+}
+.so6-5 {
+  left: 68px;
+  top: 576px;
+  z-index: -5;
+}
+.so6-6 {
+  left: 68px;
+  top: 711px;
+  z-index: -6;
+}
+.so6-7 {
+  left: 0px;
+  top: 796px;
+  z-index: -7;
+}
+.so6-8 {
+  left: 0px;
+  top: 0px;
+  z-index: -8;
+}
+.box {
+  transition: opacity 1s;
+}
+.so7-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so7-1 {
+  left: 151px;
+  top: 471px;
+  z-index: -1;
+}
+.so7-2 {
+  left: 151px;
+  top: 604px;
+  z-index: -2;
+}
+.so7-3 {
+  left: 151px;
+  top: 736px;
+  z-index: -3;
+}
+.so7-4 {
+  left: 62px;
+  top: 433px;
+  z-index: -4;
+  pointer-events: none;
+}
+.so7-5 {
+  left: 37px;
+  top: 158px;
+  z-index: -5;
+}
+.so7-6 {
+  left: 0px;
+  top: 0px;
+  z-index: -6;
+}
+.so8-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so8-1 {
+  left: 37px;
+  top: 475px;
+  z-index: -1;
+}
+.so8-2 {
+  left: 113px;
+  top: 613px;
+  z-index: -2;
+}
+.so8-3 {
+  left: 113px;
+  top: 544px;
+  z-index: -3;
+}
+.so8-4 {
+  left: 148px;
+  top: 797px;
+  z-index: -4;
+}
+.so8-5 {
+  left: 148px;
+  top: 930px;
+  z-index: -5;
+}
+.so8-6 {
+  left: 148px;
+  top: 1062px;
+  z-index: -6;
+}
+.so8-7 {
+  left: 59px;
+  top: 761px;
+  z-index: -7;
+  pointer-events: none;
+}
+.so8-8 {
+  left: 383px;
+  top: 208px;
+  z-index: -8;
+}
+.so8-9 {
+  left: 36px;
+  top: 126px;
+  z-index: -9;
+}
+.so8-10 {
+  left: 0px;
+  top: 0px;
+  z-index: -10;
+}
+.so9-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so9-1 {
+  left: 37px;
+  top: 156px;
+  z-index: -1;
+}
+.so9-2 {
+  left: 74px;
+  top: 457px;
+  z-index: -2;
+}
+.so9-3 {
+  left: 74px;
+  top: 593px;
+  z-index: -3;
+}
+.so9-4 {
+  left: 74px;
+  top: 728px;
+  z-index: -4;
+}
+.so9-5 {
+  left: 0px;
+  top: 0px;
+  z-index: -5;
+}
+.so10-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so10-1 {
+  left: 31px;
+  top: 604px;
+  z-index: -1;
+}
+.so10-2 {
+  left: 68px;
+  top: 874px;
+  z-index: -2;
+}
+.so10-3 {
+  left: 68px;
+  top: 1010px;
+  z-index: -3;
+}
+.so10-4 {
+  left: 68px;
+  top: 1145px;
+  z-index: -4;
+}
+.so10-5 {
+  left: 0px;
+  top: 372px;
+  z-index: -5;
+}
+.so10-6 {
+  left: 0px;
+  top: 0px;
+  z-index: -6;
+}
+.so11-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so11-1 {
+  left: 31px;
+  top: 161px;
+  z-index: -1;
+}
+.so11-2 {
+  left: 68px;
+  top: 447px;
+  z-index: -2;
+}
+.so11-3 {
+  left: 68px;
+  top: 583px;
+  z-index: -3;
+}
+.so11-4 {
+  left: 68px;
+  top: 718px;
+  z-index: -4;
+}
+.so11-5 {
+  left: 428px;
+  top: 526px;
+  z-index: -5;
+}
+.so11-6 {
+  left: 192px;
+  top: 729px;
+  z-index: -6;
+}
+.so11-7 {
+  left: 46px;
+  top: 1038px;
+  z-index: -7;
+}
+.so11-8 {
+  left: 281px;
+  top: 868px;
+  z-index: -8;
+}
+.so11-9 {
+  left: 0px;
+  top: 0px;
+  z-index: -9;
+}
+
+</style>
